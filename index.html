@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider</title>
+</head>
+<script type="text/javascript">
+	
+var imageCount = 1;
+var total = 6;
+
+function slide(x) {
+	var image = document.getElementById('image');
+	imageCount = imageCount + x;
+	if(imageCount > total) {
+		imageCount = 1;
+	} 
+	if(imageCount < 1) {
+		imageCount = total;
+	} 
+	image.src = imageCount + ".jpg";
+}
+
+</script>
+<body>
+<style type="text/css">
+	#slider {
+		height: 450px;
+		width: 650px;
+		margin: 20px auto;
+		position: relative;
+	}
+
+	img{
+
+		height: 450px;
+		width: 650px;
+		position: absolute;
+		}
+
+	#left-slider{
+		height: 450px;
+		width: 650px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+
+	#right-slider {
+		height: 450px;
+		width: 650px;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+
+	.left-slider-img {
+		height: 50px;
+		width: 50px;
+		position: absolute;
+		top: 40%;
+		left: 0px;
+	}	
+
+	.right-slider-img {
+		height: 50px;
+		width: 50px;
+		position: absolute;
+		top: 40%;
+		right: 0px;
+	}
+
+</style>
+
+
+
+	<div id="slider">
+		<img id="image" src="1.jpg"/>
+		<div id="left-slider"><img onClick="slide(-1)" class="left-slider-img" src="left.png"></div>
+		<div id="right-slider"><img onClick="slide(1)" class="right-slider-img" src="right.png"></div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
